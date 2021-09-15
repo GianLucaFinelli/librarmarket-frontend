@@ -2,8 +2,8 @@ import React from 'react';
 
 const Navbar = () => {
     return (
-        <nav className="w-100 navbar bg-dark border-bottom border-dark py-2">
-            <div className="container d-flex flex-row justify-content-between px-3">
+        <nav className="w-100 navbar bg-secondary border-bottom border-dark py-3">
+            <div className="w-100 px-4 d-flex flex-row justify-content-between">
                 <h4 className="text-white">User Name</h4>
                 <div>
                     <select className="form-control">
