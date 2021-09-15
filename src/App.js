@@ -17,10 +17,10 @@ const App = () => {
                 <Route exact path="/login" component={Login}/>
 
                 {/* Private routes */}
-                <Route exact path="/" component={Home}/>
-                <Route exact path="/categories" component={Categories}/>
-                <Route exact path="/products" component={Products}/>
-                <Route exact path="/product/:id" component={Product}/>
+                <Route exact path="/admin" component={Home}/>
+                <Route exact path="/admin/categories" component={Categories}/>
+                <Route exact path="/admin/products" component={Products}/>
+                <Route exact path="/admin/product/:id" component={Product}/>
             </Switch>
         </Router>
     )
