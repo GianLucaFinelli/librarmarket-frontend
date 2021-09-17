@@ -1,10 +1,11 @@
 import React from 'react';
 import Layout from '../components/Layout';
+import HomePage from '../components/HomePage';
 
 const Home = () => {
     return (
         <Layout>
-            <h1 className="text-white">Homepage</h1>
+            <HomePage/>
         </Layout>
     )
 }

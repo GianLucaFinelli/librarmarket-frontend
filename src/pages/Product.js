@@ -3,7 +3,9 @@ import Layout from '../components/Layout';
 
 const Product = () => {
     return (
-        <h1 className="text-white">Pagina de producto</h1>
+        <Layout>
+            <h1 className="text-white">Pagina de producto</h1>
+        </Layout>
     )
 }
 

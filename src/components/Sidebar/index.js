@@ -1,18 +1,26 @@
 import React from 'react';
 
+import {
+    Aside,
+    Container,
+    List,
+    ListItem,
+    Link
+} from './styles';
+
 const Sidebar = () => {
     return (
-        <aside className="col col-2 bg-dark border-end border-dark">
-            <div className="container px-4 h-100 d-flex flex-column justify-content-center">
-                <ul className="d-flex flex-column list-none">
-                    <li className="text-white fs-4 py-2">Productos</li>
-                    <li className="text-white fs-4 py-2">Categorias</li>
-                    <li className="text-white fs-4 py-2">Proveedores</li>
-                    <li className="text-white fs-4 py-2">Comprobantes</li>
-                    <li className="text-white fs-4 py-2">Informes</li>
-                </ul>
-            </div>
-        </aside>
+        <Aside>
+            <Container>
+                <List>
+                    <ListItem><Link to="/admin/products">Productos</Link></ListItem>
+                    <ListItem><Link to="/admin/categories">Categorias</Link></ListItem>
+                    <ListItem><Link to="#">Proveedores</Link></ListItem>
+                    <ListItem><Link to="#">Comprobantes</Link></ListItem>
+                    <ListItem><Link to="#">Informes</Link></ListItem>
+                </List>
+            </Container>
+        </Aside>
     )
 }
 

@@ -1,19 +1,36 @@
 import React from 'react';
+import {
+    Nav,
+    Container,
+    H2, H4, P,
+    ProfileContainer,
+    Image,
+    Select,
+    Profile,
+} from './styles';
 
 const Navbar = () => {
     return (
-        <nav className="w-100 navbar bg-secondary border-bottom border-dark py-3">
-            <div className="w-100 px-4 d-flex flex-row justify-content-between">
-                <h4 className="text-white">User Name</h4>
+        <Nav>
+            <Container>
                 <div>
-                    <select className="form-control">
+                    <H2>Dashboard</H2>
+                    <P>Detailed information</P>
+                </div>
+                <ProfileContainer>
+                    <Image src="https://res.cloudinary.com/dspswtipv/image/upload/v1629675425/Linkedin-clon/elon_musk_zqdonq.jpg"/>
+                    {/* <Select>
                         <option value="profile">Perfil</option>
                         <option value="settings">Configuraciones</option>
                         <option value="signout">Cerrar sesión</option>
-                    </select>
-                </div>
-            </div>
-        </nav>
+                    </Select> */}
+                    <div>
+                        <H4>Elon Musk</H4>
+                        <Profile>Administrador</Profile>
+                    </div>
+                </ProfileContainer>
+            </Container>
+        </Nav>
     )
 }
 
