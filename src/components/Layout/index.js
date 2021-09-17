@@ -9,13 +9,13 @@ import {
     Article,
 } from './styles';
 
-const Layout = ({ children }) => {
+const Layout = ({ children, text }) => {
     return (
         <Main>
             <MainContainer>
                 <Sidebar/>
                 <Section>
-                    <Navbar/>
+                    <Navbar text={text}/>
                     <Article>
                         { children }
                     </Article>

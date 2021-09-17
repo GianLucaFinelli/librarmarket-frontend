@@ -4,7 +4,7 @@ import HomePage from '../components/HomePage';
 
 const Home = () => {
     return (
-        <Layout>
+        <Layout text="Detailed/general information">
             <HomePage/>
         </Layout>
     )
