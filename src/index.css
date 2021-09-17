@@ -9,11 +9,11 @@ body {
   height: 100%;
 }
 
-h1, h2, h3 {
+h1, h2, h3, th {
   font-family: 'Montserrat', sans-serif;
 }
 
-h4, h5, h6, a, p, button {
+h4, h5, h6, a, p, button, td {
   font-family: 'Roboto', sans-serif;
 }
 

@@ -18,6 +18,7 @@ export const Header = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 20px;
 `;
 
 export const H4 = styled.h4`
@@ -35,4 +36,34 @@ export const Input = styled.input`
     &:focus {
         outline: none;
     }
+`;
+
+export const Table = styled.table`
+    width: 100%;
+    margin-bottom: 20px;
+    border-collapse: collapse;
+`;
+
+export const THead = styled.thead`
+    background-color: ${p => p.theme.colors['red']};
+`;
+
+export const TH = styled.th`
+    font-weight: 700;
+    text-align: left;
+    padding: 6px;
+    color: ${p => p.theme.colors['light-gray']};
+    text-align: ${p => p.align ? p.align : 'left'};
+`;
+
+export const TR = styled.tr`
+    border-bottom: 1px solid ${p => p.theme.colors['dark']};
+    &:last-child {
+        border: none;
+    }
+`;
+
+export const TD = styled.td`
+    padding: 10px 6px;
+    text-align: ${p => p.align ? p.align : 'left'};
 `;
