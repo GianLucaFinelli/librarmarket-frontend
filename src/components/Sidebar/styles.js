@@ -22,11 +22,17 @@ export const List = styled.ul`
 
 export const ListItem = styled.li`
     font-size: 22px;
-    padding: 5px 0px;
+    padding: 12px 0px;   
 `;
 
 export const Link = styled(RouteLink)`
     display: block;
     color: white;
+    font-weight: 500;
+    font-size: 26px;
+    transition-duration: 300ms;
     text-decoration: none;
+    &:hover {
+        color: ${p => p.theme.colors['red']};
+    } 
 `;

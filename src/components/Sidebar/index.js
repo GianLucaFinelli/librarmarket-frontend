@@ -13,6 +13,7 @@ const Sidebar = () => {
         <Aside>
             <Container>
                 <List>
+                    <ListItem><Link to="/admin/">Home</Link></ListItem>
                     <ListItem><Link to="/admin/products">Productos</Link></ListItem>
                     <ListItem><Link to="/admin/categories">Categorias</Link></ListItem>
                     <ListItem><Link to="#">Proveedores</Link></ListItem>
