@@ -16,7 +16,9 @@ const Dashboard = styled.div`
 
 export const BigDashboard = styled(Dashboard)`
     width: 100%;
+    height: auto;
     margin-bottom: 20px;
+    display: flex;
 `;
 
 export const MediumDashboard = styled(Dashboard)`
