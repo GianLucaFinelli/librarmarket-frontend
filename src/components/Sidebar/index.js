@@ -4,9 +4,12 @@ import { useLocation } from 'react-router-dom';
 import {
     Aside,
     Container,
+    PanelButton,
+    PanelText,
     List,
     ListItem,
-    Link
+    Link,
+    Copyright
 } from './styles';
 
 const Sidebar = () => {
@@ -17,6 +20,9 @@ const Sidebar = () => {
     return (
         <Aside>
             <Container>
+                <PanelButton>
+                    <PanelText>Librar Market</PanelText>
+                </PanelButton>
                 <List>
                     <ListItem><Link className={`${route === '/admin' ? 'active' : ''}`} to="/admin">Home</Link></ListItem>
                     <ListItem><Link className={`${route === '/admin/products' ? 'active' : ''}`} to="/admin/products">Productos</Link></ListItem>
@@ -25,6 +31,9 @@ const Sidebar = () => {
                     <ListItem><Link className={`${route === '' ? 'active' : ''}`} to="#">Comprobantes</Link></ListItem>
                     <ListItem><Link className={`${route === '' ? 'active' : ''}`} to="#">Informes</Link></ListItem>
                 </List>
+                <Copyright>
+                    <p>soporte@librarmarket.com</p>
+                </Copyright>
             </Container>
         </Aside>
     )

@@ -11,7 +11,20 @@ export const Container = styled.div`
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
+`;
+
+export const PanelButton = styled.div`
+    background-color: ${p => p.theme.colors['red']};
+    border-radius: 8px;
+    width: 100%;
+    padding: 10px 0;
+`;
+
+export const PanelText = styled.h2`
+    font-weight: 700;
+    color: white;
+    text-align: center;
 `;
 
 export const List = styled.ul`
@@ -22,7 +35,7 @@ export const List = styled.ul`
 
 export const ListItem = styled.li`
     font-size: 22px;
-    padding: 12px 0px;   
+    padding: 12px 0px;
 `;
 
 export const Link = styled(RouteLink)`
@@ -38,4 +51,11 @@ export const Link = styled(RouteLink)`
     &:hover {
         color: ${p => p.theme.colors['red']};
     } 
+`;
+
+export const Copyright = styled.div`
+    color: white;
+    p {
+        font-size: 12px;
+    }
 `;
