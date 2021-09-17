@@ -9,7 +9,7 @@ export const Container = styled.div`
 
 const Dashboard = styled.div`
     height: 180px;
-    border: 5px solid #bfbfbf;
+    border: 3px solid ${p => p.theme.colors['border']};
     border-radius: 15px;
     /* background-color: ${p => p.theme.colors['red']}; */
 `;
