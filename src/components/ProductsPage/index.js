@@ -11,7 +11,11 @@ import {
     TH,
     TR,
     TD,
+    Button,
 } from './styles';
+import Info from '../assets/Info';
+import Pencil from '../assets/Pencil';
+import Trash from '../assets/Trash';
 import { items } from './constants';
 
 const ProductsPage = () => {
@@ -36,7 +40,11 @@ const ProductsPage = () => {
                         {
                             items.map(item => (
                                 <TR key={item.id}>
-                                    <TD></TD>
+                                    <TD>
+                                        <Button><Info/></Button>
+                                        <Button><Pencil/></Button>
+                                        <Button><Trash/></Button>
+                                    </TD>
                                     <TD>{item.name}</TD>
                                     <TD>{item.category}</TD>
                                     <TD align="center">${item.price}</TD>
