@@ -32,6 +32,9 @@ export const Link = styled(RouteLink)`
     font-size: 26px;
     transition-duration: 300ms;
     text-decoration: none;
+    &.active {
+        color: ${p => p.theme.colors['red']};
+    }
     &:hover {
         color: ${p => p.theme.colors['red']};
     } 
