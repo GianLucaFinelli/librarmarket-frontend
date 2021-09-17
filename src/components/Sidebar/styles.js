@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 export const Aside = styled.aside`
     width: 20%;
-    padding: 20px 10px 20px 36px;
+    padding: 20px 30px 20px 30px;
     background-color: ${p => p.theme.colors['dark']};
 `;
 
