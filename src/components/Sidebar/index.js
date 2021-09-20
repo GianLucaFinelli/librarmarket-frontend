@@ -31,10 +31,10 @@ const Sidebar = () => {
                     <ListItem><Link className={`${route === '' ? 'active' : ''}`} to="#">Comprobantes</Link></ListItem>
                     <ListItem><Link className={`${route === '' ? 'active' : ''}`} to="#">Informes</Link></ListItem>
                 </List>
-                <Copyright>
+            </Container>
+            <Copyright>
                     <p>soporte@librarmarket.com</p>
                 </Copyright>
-            </Container>
         </Aside>
     )
 }

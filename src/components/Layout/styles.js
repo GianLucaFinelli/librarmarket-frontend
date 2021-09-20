@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const Main = styled.main`
     height: 100%;
+    color: ${p => p.theme.colors['light-gray']};
 `;
 
 export const MainContainer = styled.div`
@@ -11,14 +12,15 @@ export const MainContainer = styled.div`
 `; 
 
 export const Section = styled.section`
+    background-color: ${p => p.theme.colors['dark']};
     display: flex;
     flex-direction: column;
     height: 100%;
-    width: 80%;
+    width: 85%;
+    box-sizing: border-box;
 `;
 
 export const Article = styled.article`
-    background-color: ${p => p.theme.colors['light-gray']};
     height: 100%;
-    padding: 10px 25px;
+    padding: 10px 45px;
 `;

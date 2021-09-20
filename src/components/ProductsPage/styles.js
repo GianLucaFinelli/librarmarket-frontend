@@ -9,9 +9,10 @@ export const Container = styled.div`
 
 export const TableContainer = styled.div`
     width: 100%;
-    border-radius: 15px;
-    padding: 10px 36px;
-    border: 3px solid ${p => p.theme.colors['border']};
+    border-radius: 8px;
+    padding: 10px 16px;
+    // border: 1px solid ${p => p.theme.colors['light-gray']};
+    background: ${p => p.theme.colors['light-dark-secondary']};
 `;
 
 export const Header = styled.div`
@@ -23,16 +24,17 @@ export const Header = styled.div`
 
 export const H4 = styled.h4`
     font-size: 18px;
-    color: ${p => p.theme.colors['dark']};
+    color: ${p => p.theme.colors['light-gray']};
 `;
 
 export const Input = styled.input`
     border-radius: 999px;
     padding: 8px 14px;
     width: 120px;
-    color: ${p => p.theme.colors['gray']};
-    border: 2px solid ${p => p.theme.colors['dark']};
-    background-color: transparent;
+    color: ${p => p.theme.colors['light-gray']};
+    // border: 1px solid ${p => p.theme.colors['grey']};
+    border: none !important;
+    background-color: ${p => p.theme.colors['light-dark']};
     &:focus {
         outline: none;
     }
@@ -51,34 +53,36 @@ export const THead = styled.thead`
 export const TH = styled.th`
     font-weight: 700;
     text-align: left;
-    padding: 6px;
+    padding: 8px;
     color: ${p => p.theme.colors['light-gray']};
     text-align: ${p => p.align ? p.align : 'left'};
 `;
 
 export const TR = styled.tr`
-    border-bottom: 1px solid ${p => p.theme.colors['dark']};
+    font-size: 14px;
+    // border-bottom: 1px solid ${p => p.theme.colors['dark']};
     &:last-child {
         border: none;
     }
+    &:nth-child(odd) {background: ${p => p.theme.colors['light-dark']}; }
 `;
 
 export const TD = styled.td`
-    padding: 10px 6px;
+    padding: 5px;
     text-align: ${p => p.align ? p.align : 'left'};
 `;
 
 export const Button = styled.button`
-    border-radius: 7px;
+    border-radius: 5px;
     border: none;
     color: white;
-    padding: 6px 8px;
-    margin-right: 5px;
+    padding: 6px;
+    margin-right: 8px;
     background-color: red;
     cursor: pointer;
-    &:nth-child(1){ background-color: #2bf035; }
-    &:nth-child(2){ background-color: #2b8af0; }
-    &:nth-child(3){ background-color: #f01d20; }
+    &:nth-child(1){ background-color: #10733e; }
+    &:nth-child(2){ background-color: #2a619c; }
+    &:nth-child(3){ background-color: #8a1719; }
     &:focus {
         outline: none;
     }

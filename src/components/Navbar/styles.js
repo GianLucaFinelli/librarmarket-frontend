@@ -1,21 +1,22 @@
 import styled from 'styled-components';
 
 export const Nav = styled.nav`
-    background-color: ${p => p.theme.colors['light-gray']};
-    padding: 14px 0;
+    background-color: ${p => p.theme.colors['dark']};
+    padding: 16px 0;
+    margin-bottom: 20px;
     width: 100%;
-    box-shadow: 10px 5px 5px black;
+    // box-shadow: 10px 5px 5px black;
 `;
 
 export const Container = styled.div`
-    padding: 0 25px;
+    padding: 10px 45px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 `;
 
 export const H2 = styled.h2`
-    color: ${p => p.theme.colors['dark']};
+    color: ${p => p.theme.colors['light-grey']};
 `;
 
 export const H4 = styled.h4`

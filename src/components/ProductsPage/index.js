@@ -29,26 +29,26 @@ const ProductsPage = () => {
                 <Table>
                     <THead>
                         <tr>
-                            <TH>Options</TH>
                             <TH>Nombre</TH>
                             <TH>Categoria</TH>
                             <TH align="center">Precio</TH>
                             <TH align="center">Disponible</TH>
+                            <TH>Options</TH>
                         </tr>
                     </THead>
                     <tbody>
                         {
                             items.map(item => (
                                 <TR key={item.id}>
+                                    <TD>{item.name}</TD>
+                                    <TD>{item.category}</TD>
+                                    <TD align="center">${item.price}</TD>
+                                    <TD align="center">{item.available}</TD>
                                     <TD>
                                         <Button><Info/></Button>
                                         <Button><Pencil/></Button>
                                         <Button><Trash/></Button>
                                     </TD>
-                                    <TD>{item.name}</TD>
-                                    <TD>{item.category}</TD>
-                                    <TD align="center">${item.price}</TD>
-                                    <TD align="center">{item.available}</TD>
                                 </TR>
                             ))
                         }

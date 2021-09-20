@@ -9,9 +9,10 @@ export const Container = styled.div`
 
 const Dashboard = styled.div`
     height: 180px;
-    border: 3px solid ${p => p.theme.colors['border']};
+    // border: 1px solid ${p => p.theme.colors['border']};
+    background: ${p => p.theme.colors['light-dark-secondary']};
     border-radius: 15px;
-    /* background-color: ${p => p.theme.colors['red']}; */
+    /* background-color: ${p => p.theme.colors['red-secondary']}; */
 `;
 
 export const BigDashboard = styled(Dashboard)`
