@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import {
     Container,
@@ -17,14 +17,24 @@ import Info from '../assets/Info';
 import Pencil from '../assets/Pencil';
 import Trash from '../assets/Trash';
 import { items } from './constants';
+import Modal from '../Modal';
 
 const ProductsPage = () => {
+
+    const [modal, setModal] = useState(true);
+
     return (
         <Container>
             <TableContainer>
                 <Header>
                     <H4>Productos más vendidos</H4>
-                    <Input placeholder="Buscar..."/>
+                    <div>
+                        <Input placeholder="Buscar..."/>
+                        <Button
+                            color="btn-green"
+                            onClick={() => setModal(true)}
+                        >Agregar nuevo</Button>
+                    </div>
                 </Header>
                 <Table>
                     <THead>
@@ -45,9 +55,9 @@ const ProductsPage = () => {
                                     <TD align="center">${item.price}</TD>
                                     <TD align="center">{item.available}</TD>
                                     <TD>
-                                        <Button><Info/></Button>
-                                        <Button><Pencil/></Button>
-                                        <Button><Trash/></Button>
+                                        <Button color="btn-green"><Info/></Button>
+                                        <Button color="btn-blue"><Pencil/></Button>
+                                        <Button color="btn-red"><Trash/></Button>
                                     </TD>
                                 </TR>
                             ))
@@ -55,6 +65,11 @@ const ProductsPage = () => {
                     </tbody>
                 </Table>
             </TableContainer>
+            <Modal
+                show={modal}
+                setShow={setModal}
+                title="Nuevo Producto"
+            />
         </Container>
     )
 }

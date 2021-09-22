@@ -31,6 +31,7 @@ export const Input = styled.input`
     border-radius: 999px;
     padding: 8px 14px;
     width: 120px;
+    margin-right: 10px;
     color: ${p => p.theme.colors['light-gray']};
     // border: 1px solid ${p => p.theme.colors['grey']};
     border: none !important;
@@ -80,9 +81,8 @@ export const Button = styled.button`
     margin-right: 8px;
     background-color: red;
     cursor: pointer;
-    &:nth-child(1){ background-color: #10733e; }
-    &:nth-child(2){ background-color: #2a619c; }
-    &:nth-child(3){ background-color: #8a1719; }
+    font-weight: bold;
+    background-color: ${p => p.theme.colors[p.color]};
     &:focus {
         outline: none;
     }

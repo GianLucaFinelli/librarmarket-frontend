@@ -9,5 +9,8 @@ export const theme = {
         'light-dark': '#202020',
         'light-dark-secondary': '#242424',
         'border': '#a6a6a6',
+        'btn-red': '#8a1719',
+        'btn-blue': '#2a619c',
+        'btn-green': '#10733e',
     }
 }
