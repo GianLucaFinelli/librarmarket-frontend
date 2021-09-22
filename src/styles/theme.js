@@ -9,5 +9,6 @@ export const theme = {
         'light-dark': '#202020',
         'light-dark-secondary': '#242424',
         'border': '#a6a6a6',
+        'border-transparency': 'rgba(87, 87, 87,0.2)'
     }
 }

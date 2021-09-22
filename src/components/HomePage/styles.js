@@ -20,12 +20,15 @@ export const BigDashboard = styled(Dashboard)`
     height: auto;
     margin-bottom: 20px;
     display: flex;
+    border: 1px solid ${p => p.theme.colors['border-transparency']};
 `;
 
 export const MediumDashboard = styled(Dashboard)`
     width: 68%;
+    border: 1px solid ${p => p.theme.colors['border-transparency']};
 `;
 
 export const SmallDashboard = styled(Dashboard)`
     width: 28%;
+    border: 1px solid ${p => p.theme.colors['border-transparency']};
 `;

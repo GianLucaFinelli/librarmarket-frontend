@@ -8,6 +8,7 @@ export const Aside = styled.aside`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    border: 1px solid ${p => p.theme.colors['border-transparency']};
 `;
 
 export const Container = styled.div`

@@ -12,6 +12,7 @@ export const TableContainer = styled.div`
     border-radius: 8px;
     padding: 10px 16px;
     // border: 1px solid ${p => p.theme.colors['light-gray']};
+    border: 1px solid ${p => p.theme.colors['border-transparency']};
     background: ${p => p.theme.colors['light-dark-secondary']};
 `;
 
