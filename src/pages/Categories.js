@@ -1,10 +1,11 @@
 import React from 'react';
 import Layout from '../components/Layout';
+import CategoryPage from '../components/CategoryPage';
 
 const Categories = () => {
     return (
         <Layout text="List of all categories">
-            <h1 className="text-white">Pagina de categorias</h1>
+            <CategoryPage/>
         </Layout>
     )
 }

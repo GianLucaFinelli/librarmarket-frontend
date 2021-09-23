@@ -6,7 +6,7 @@ export const Overlay = styled.div`
     right: 0;
     bottom: 0;
     position: fixed;
-    opacity: 0.45;
+    opacity: 0.80;
     z-index: 999;
     display: ${p => p.show ? 'block' : 'none'};
     background-color: ${p => p.theme.colors['dark']};
@@ -23,8 +23,8 @@ export const ModalContainer = styled.section`
     flex-direction: column;
     transform: translateX(-50%);
     display: ${p => p.show ? 'block' : 'none'};
-    background-color: ${p => p.theme.colors['dark']};
-    border: 1px solid ${p => p.theme.colors['border']};
+    background-color: ${p => p.theme.colors['light-dark']};
+    border: 1px solid ${p => p.theme.colors['border-transparency']};
 `;
 
 export const ModalHeader = styled.header`
@@ -33,12 +33,16 @@ export const ModalHeader = styled.header`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 1px solid ${p => p.theme.colors['border']};
+    border-bottom: 1px solid ${p => p.theme.colors['border-transparency']};
+`;
+
+export const ModalBody = styled.div`
+    padding: 10px;
 `;
 
 export const H1 = styled.h1`
     color: white;
-    font-size: 24px;
+    font-size: 20px;
     margin-left: 24px;
 `;
 

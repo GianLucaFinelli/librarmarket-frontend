@@ -18,8 +18,9 @@ import Pencil from '../assets/Pencil';
 import Trash from '../assets/Trash';
 import { items } from './constants';
 import Modal from '../Modal';
+import CategoryForm from './CategoryForm';
 
-const ProductsPage = () => {
+const CategoryPage = () => {
 
     const [modal, setModal] = useState(false);
 
@@ -27,22 +28,20 @@ const ProductsPage = () => {
         <Container>
             <TableContainer>
                 <Header>
-                    <H4>Listado de Producto</H4>
+                    <H4>Todas las Categorias</H4>
                     <div>
                         <Input placeholder="Buscar..."/>
                         <Button
                             color="btn-green"
                             onClick={() => setModal(true)}
-                        >Agregar nuevo</Button>
+                        >Agregar nueva Categoria</Button>
                     </div>
                 </Header>
                 <Table>
                     <THead>
                         <tr>
                             <TH>Nombre</TH>
-                            <TH>Categoria</TH>
-                            <TH align="center">Precio</TH>
-                            <TH align="center">Disponible</TH>
+                            <TH>Descripcion</TH>
                             <TH>Options</TH>
                         </tr>
                     </THead>
@@ -50,10 +49,8 @@ const ProductsPage = () => {
                         {
                             items.map(item => (
                                 <TR key={item.id}>
-                                    <TD>{item.name}</TD>
-                                    <TD>{item.category}</TD>
-                                    <TD align="center">${item.price}</TD>
-                                    <TD align="center">{item.available}</TD>
+                                    <TD>{item.nombre}</TD>
+                                    <TD>{item.descripcion}</TD>
                                     <TD>
                                         <Button color="btn-green"><Info/></Button>
                                         <Button color="btn-blue"><Pencil/></Button>
@@ -68,10 +65,12 @@ const ProductsPage = () => {
             <Modal
                 show={modal}
                 setShow={setModal}
-                title="Nuevo Producto"
-            />
+                title="Nueva Categoria"
+            >
+                <CategoryForm />
+            </Modal>
         </Container>
     )
 }
 
-export default ProductsPage;
+export default CategoryPage;
