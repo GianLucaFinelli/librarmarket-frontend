@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { usePagination } from '../../hooks/usePagination';
 
 import {
     Container,
@@ -62,6 +63,7 @@ const CategoryPage = () => {
                     </tbody>
                 </Table>
             </TableContainer>
+            
             <Modal
                 show={modal}
                 setShow={setModal}
