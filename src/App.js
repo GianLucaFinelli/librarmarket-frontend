@@ -9,6 +9,7 @@ import Home from './pages/Home';
 import Categories from './pages/Categories';
 import Products from './pages/Products';
 import Product from './pages/Product';
+import SubCategories from './pages/SubCategories';
 
 const App = () => {
     return (
@@ -23,6 +24,7 @@ const App = () => {
                     <Route exact path="/admin/categories" component={Categories}/>
                     <Route exact path="/admin/products" component={Products}/>
                     <Route exact path="/admin/product/:id" component={Product}/>
+                    <Route exact path="/admin/subcategories" component={SubCategories}/>
                 </Switch>
             </Router>
         </ThemeProvider>

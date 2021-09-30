@@ -29,6 +29,12 @@ const ProductsPage = () => {
                 <Header>
                     <H4>Listado de Producto</H4>
                     <div>
+                        <Button 
+                            color="btn-red"
+                            onClick={()=>setModal(true)}
+                            >Eliminar Producto</Button>
+                    </div>
+                    <div>
                         <Input placeholder="Buscar..."/>
                         <Button
                             color="btn-green"
