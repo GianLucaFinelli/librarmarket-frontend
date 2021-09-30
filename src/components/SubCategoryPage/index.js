@@ -28,17 +28,11 @@ const SubCategoryPage = () => {
                 <Header>
                     <H4>Todas las SubCategorias</H4>
                     <div>
-                        <Button 
-                            color="btn-red"
-                            onClick={()=>setModal(true)}
-                            >Eliminar Subcategoria</Button>
-                    </div>
-                    <div>
                         <Input placeholder="Buscar..."/>
                         <Button
                             color="btn-green"
                             onClick={() => setModal(true)}
-                        >Agregar nueva SubCategoria</Button>
+                        >Agregar Nueva</Button>
                     </div>
                 </Header>
                 <Table>

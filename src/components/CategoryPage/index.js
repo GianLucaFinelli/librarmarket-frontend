@@ -31,12 +31,6 @@ const CategoryPage = () => {
                 <Header>
                     <H4>Todas las Categorias</H4>
                     <div>
-                        <Button 
-                            color="btn-red"
-                            onClick={()=>setModal(true)}
-                            >Eliminar Categoria</Button>
-                    </div>
-                    <div>
                         <Input placeholder="Buscar..."/>
                         <Button
                             color="btn-green"
