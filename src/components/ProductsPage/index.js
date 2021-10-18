@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import clientAxios from '../../config/axios';
 
 import {
     Container,
@@ -21,7 +22,38 @@ import Modal from '../Modal';
 
 const ProductsPage = () => {
 
+    const [loaded, setLoaded] = useState(false);
     const [modal, setModal] = useState(false);
+    const [data, setData] = useState([]);
+
+    // Termario
+    // data.length ? console.log('true') : console.log('false')
+    
+    useEffect(() => {
+        if (!loaded) {
+            fetchData();
+        }
+    }, [data])
+
+    const fetchData = async () => {
+        // const res = await clientAxios.get('get-products');
+        setTimeout(() => {
+            setData(items);
+            setLoaded(true);
+        }, 1000)
+    }
+
+    // POST
+    // const createProduct = async () => {
+    //     const product = { name: 'Hoja de calcar', precio: '40', categoria: 'papel' }
+    //     const res = await clientAxios.post('create-product', product);
+    //     if (res.status === 200) {
+    //         setData([...data, res.data])
+    //         alert('Se ha creado un producto correctamente')
+    //     } else {
+    //         alert(res.statusText)
+    //     }
+    // }
 
     return (
         <Container>
@@ -48,19 +80,25 @@ const ProductsPage = () => {
                     </THead>
                     <tbody>
                         {
-                            items.map(item => (
-                                <TR key={item.id}>
-                                    <TD>{item.name}</TD>
-                                    <TD>{item.category}</TD>
-                                    <TD align="center">${item.price}</TD>
-                                    <TD align="center">{item.available}</TD>
-                                    <TD>
-                                        <Button color="btn-green"><Info/></Button>
-                                        <Button color="btn-blue"><Pencil/></Button>
-                                        <Button color="btn-red"><Trash/></Button>
-                                    </TD>
+                            loaded ? (
+                                data.length ? data.map(item => (
+                                    <TR key={item.id}>
+                                        <TD>{item.name}</TD>
+                                        <TD>{item.category}</TD>
+                                        <TD align="center">${item.price}</TD>
+                                        <TD align="center">{item.available}</TD>
+                                        <TD>
+                                            <Button color="btn-green"><Info/></Button>
+                                            <Button color="btn-blue"><Pencil/></Button>
+                                            <Button color="btn-red"><Trash/></Button>
+                                        </TD>
+                                    </TR>
+                                )) : <TR>
+                                    <TD colSpan="5">No hay productos que mostrar.</TD>
                                 </TR>
-                            ))
+                            ) : <TR>
+                            <TD colSpan="5">Cargando productos...</TD>
+                        </TR>
                         }
                     </tbody>
                 </Table>
