@@ -13,15 +13,26 @@ import {
     TD,
     Button,
 } from './styles';
+import {
+    Overlay,
+    ModalContainer,
+    ModalHeader,
+    H1,
+    IconContainer,
+    ModalBody,
+} from './styles';
 import Info from '../assets/Info';
 import Pencil from '../assets/Pencil';
 import Trash from '../assets/Trash';
 import { items } from './constants';
 import Modal from '../Modal';
 import SubCategoryForm from './SubCategoryForm';
+import FormDelete from '../Modal/FormDelete';
 
 const SubCategoryPage = () => {
     const [modal, setModal] = useState(false);
+    const [modalDelete, setModalDelete] = useState(false);
+    const [itemSelected, setItemSelected] = useState({});
     return (
         <Container>
             <TableContainer>
@@ -52,7 +63,11 @@ const SubCategoryPage = () => {
                                     <TD>
                                         <Button color="btn-green"><Info/></Button>
                                         <Button color="btn-blue"><Pencil/></Button>
-                                        <Button color="btn-red"><Trash/></Button>
+                                        <Button color="btn-red" onClick={() => {
+                                            setModalDelete(true);
+                                            setItemSelected(item);
+                                        }}>
+                                            <Trash/></Button>
                                     </TD>
                                 </TR>
                             ))
@@ -66,6 +81,14 @@ const SubCategoryPage = () => {
                 title="Nueva SubCategoria"
             >
                 <SubCategoryForm/>
+            </Modal>
+            
+            <Modal
+                show={modalDelete}
+                setShow={setModalDelete}
+                title="¿Estas seguro de borrar esta subcategoria?"
+            >
+                <FormDelete id={itemSelected.id ?? "0"} setShow={setModalDelete} />
             </Modal>
         </Container>
     )
