@@ -5,3 +5,5 @@ const clientAxios = axios.create({
 });
 
 export default clientAxios;
+
+// GET - POST - PUT - DELETE
