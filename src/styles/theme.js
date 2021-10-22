@@ -13,12 +13,15 @@ export const theme = {
         'btn-red': '#8a1719',
         'btn-blue': '#2a619c',
         'btn-green': '#10733e',
+        'btn-options': '#1d99bc'
     }
 }
 
 /* Breackpoints
 
 - 530px
+- 600px
+- 686px
 - 716px
 - 920px
 - 1150px

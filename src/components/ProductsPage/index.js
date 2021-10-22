@@ -5,6 +5,7 @@ import {
     Container,
     TableContainer,
     Header,
+    InputsContainer,
     H4,
     Input,
     Table,
@@ -19,6 +20,7 @@ import Pencil from '../assets/Pencil';
 import Trash from '../assets/Trash';
 import { items } from './constants';
 import Modal from '../Modal';
+import { HiPlusSm, HiOutlineDotsCircleHorizontal } from 'react-icons/hi';
 
 const ProductsPage = () => {
 
@@ -37,10 +39,10 @@ const ProductsPage = () => {
 
     const fetchData = async () => {
         // const res = await clientAxios.get('get-products');
-        setTimeout(() => {
+        // setTimeout(() => {
             setData(items);
             setLoaded(true);
-        }, 1000)
+        // }, 1000)
     }
 
     // POST
@@ -59,14 +61,20 @@ const ProductsPage = () => {
         <Container>
             <TableContainer>
                 <Header>
-                    <H4>Listado de Producto</H4>
-                    <div>
+                    <H4>Listado de Productos</H4>
+                    <InputsContainer>
                         <Input placeholder="Buscar..."/>
                         <Button
+                            id="new_mobile"
+                            color="btn-green"
+                            onClick={() => setModal(true)}
+                        ><HiPlusSm/></Button>
+                        <Button
+                            id="new_desktop"
                             color="btn-green"
                             onClick={() => setModal(true)}
                         >Agregar nuevo</Button>
-                    </div>
+                    </InputsContainer>
                 </Header>
                 <Table>
                     <THead>
@@ -87,10 +95,11 @@ const ProductsPage = () => {
                                         <TD>{item.category}</TD>
                                         <TD align="center">${item.price}</TD>
                                         <TD align="center">{item.available}</TD>
-                                        <TD>
-                                            <Button color="btn-green"><Info/></Button>
-                                            <Button color="btn-blue"><Pencil/></Button>
-                                            <Button color="btn-red"><Trash/></Button>
+                                        <TD className="options">
+                                            <Button className="desktop" color="btn-green"><Info/></Button>
+                                            <Button className="desktop" color="btn-blue"><Pencil/></Button>
+                                            <Button className="desktop" color="btn-red"><Trash/></Button>
+                                            <Button className="mobile" color="btn-options"><HiOutlineDotsCircleHorizontal/></Button>
                                         </TD>
                                     </TR>
                                 )) : <TR>
