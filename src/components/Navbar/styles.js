@@ -15,8 +15,36 @@ export const Container = styled.div`
     justify-content: space-between;
 `;
 
+export const TitleContainer = styled.div`
+    display: flex;
+    align-items: center;
+    svg {
+        width: 30px;
+        height: 30px;
+        margin-right: 15px;
+    }
+`;
+
+export const BurgerBtn = styled.button`
+    display: block;
+    border: none;
+    cursor: pointer;
+    background: transparent;
+    transition-duration: 200ms;
+    color: ${p => p.theme.colors['light-gray']};
+    &:focus {
+        outline: none;
+    }
+    &:hover {
+        color: ${p => p.theme.colors['red']};
+    }
+    @media (min-width: 1150px) {
+        display: none;
+    }
+`;
+
 export const H2 = styled.h2`
-    color: ${p => p.theme.colors['light-grey']};
+    color: ${p => p.theme.colors['light-gray']};
 `;
 
 export const H4 = styled.h4`

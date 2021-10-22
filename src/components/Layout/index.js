@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Navbar from '../Navbar';
 import Sidebar from '../Sidebar';
 
@@ -10,12 +10,23 @@ import {
 } from './styles';
 
 const Layout = ({ children, text }) => {
+
+    // Used for responsive sidebar
+    const [show, setShow] = useState(true);
+
     return (
         <Main>
             <MainContainer>
-                <Sidebar/>
+                <Sidebar
+                    show={show}
+                    setShow={setShow}
+                />
                 <Section>
-                    <Navbar text={text}/>
+                    <Navbar
+                        text={text}
+                        show={show}
+                        setShow={setShow}
+                    />
                     <Article>
                         { children }
                     </Article>
