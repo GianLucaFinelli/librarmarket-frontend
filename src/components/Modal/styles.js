@@ -14,7 +14,6 @@ export const Overlay = styled.div`
 
 export const ModalContainer = styled.section`
     left: 50%;
-    width: 600px;
     height: auto;
     z-index: 1000;
     display: flex;
@@ -25,6 +24,25 @@ export const ModalContainer = styled.section`
     display: ${p => p.show ? 'block' : 'none'};
     background-color: ${p => p.theme.colors['light-dark']};
     border: 1px solid ${p => p.theme.colors['border-transparency']};
+    width: 80%;
+    @media (min-width: 520px) {
+        width: 470px;
+    }
+    @media (min-width: 600px) {
+        width: 476px;
+    }
+    @media (min-width: 686px) {
+        width: 540px;
+    }
+    @media (min-width: 716px) {
+        width: 600px;
+    }
+    @media (min-width: 920px) {
+        width: 620px;
+    }
+    @media (min-width: 1150px) {
+        width: 640px;
+    }
 `;
 
 export const ModalHeader = styled.header`
