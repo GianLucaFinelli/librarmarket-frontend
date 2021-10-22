@@ -20,6 +20,7 @@ import Pencil from '../assets/Pencil';
 import Trash from '../assets/Trash';
 import { items } from './constants';
 import Modal from '../Modal';
+import NewProduct from './NewProduct';
 import { HiPlusSm, HiOutlineDotsCircleHorizontal } from 'react-icons/hi';
 
 const ProductsPage = () => {
@@ -116,7 +117,9 @@ const ProductsPage = () => {
                 show={modal}
                 setShow={setModal}
                 title="Nuevo Producto"
-            />
+            >
+                <NewProduct/>
+            </Modal>
         </Container>
     )
 }
