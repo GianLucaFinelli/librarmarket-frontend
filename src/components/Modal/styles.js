@@ -15,7 +15,7 @@ export const Overlay = styled.div`
 export const ModalContainer = styled.section`
     left: 50%;
     width: 600px;
-    height: 350px;
+    height: auto;
     z-index: 1000;
     display: flex;
     position: absolute;

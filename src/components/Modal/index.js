@@ -10,11 +10,11 @@ import {
 } from './styles';
 import Close from '../assets/Close';
 
-const Modal = ({ show, setShow, title, children }) => {
+const Modal = ({ show, setShow, title, children, bodyHeight }) => {
     return (
         <>
             <Overlay show={show}/>
-            <ModalContainer show={show}>
+            <ModalContainer show={show} >
                 <ModalHeader>
                     <H1>{title}</H1>
                     <IconContainer
@@ -23,7 +23,7 @@ const Modal = ({ show, setShow, title, children }) => {
                         <Close/>
                     </IconContainer>
                 </ModalHeader>
-                <ModalBody>
+                <ModalBody bodyHeight={bodyHeight} >
                     { children }
                 </ModalBody>
             </ModalContainer>
