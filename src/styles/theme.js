@@ -15,3 +15,12 @@ export const theme = {
         'btn-green': '#10733e',
     }
 }
+
+/* Breackpoints
+
+- 530px
+- 716px
+- 920px
+- 1150px
+
+*/

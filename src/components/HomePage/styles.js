@@ -20,15 +20,24 @@ export const BigDashboard = styled(Dashboard)`
     height: auto;
     margin-bottom: 20px;
     display: flex;
+    flex-wrap: wrap;
     border: 1px solid ${p => p.theme.colors['border-transparency']};
 `;
 
 export const MediumDashboard = styled(Dashboard)`
-    width: 68%;
+    width: 100%;
+    margin-bottom: 20px;
     border: 1px solid ${p => p.theme.colors['border-transparency']};
+    @media (min-width: 716px) {
+        width: 66%;
+        margin-bottom: 0px;
+    }
 `;
 
 export const SmallDashboard = styled(Dashboard)`
-    width: 28%;
+    width: 100%;
     border: 1px solid ${p => p.theme.colors['border-transparency']};
+    @media (min-width: 716px) {
+        width: 30%;
+    }
 `;

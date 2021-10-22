@@ -9,10 +9,13 @@ export const Nav = styled.nav`
 `;
 
 export const Container = styled.div`
-    padding: 10px 45px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    padding: 10px 30px;
+    @media (min-width: 530px) {
+        padding: 10px 45px;
+    }
 `;
 
 export const TitleContainer = styled.div`
@@ -45,6 +48,10 @@ export const BurgerBtn = styled.button`
 
 export const H2 = styled.h2`
     color: ${p => p.theme.colors['light-gray']};
+    font-size: 20px;
+    @media (min-width: 530px) {
+        font-size: 27px;
+    }
 `;
 
 export const H4 = styled.h4`
@@ -53,7 +60,12 @@ export const H4 = styled.h4`
 
 export const P = styled.p`
     font-style: italic;
+    margin-top: 4px;
     color: ${p => p.theme.colors['gray']};
+    font-size: 14px;
+    @media (min-width: 530px) {
+        font-size: 16px;
+    }
 `;
 
 export const ProfileContainer = styled.div`
