@@ -19,7 +19,7 @@ import Pencil from '../assets/Pencil';
 import Trash from '../assets/Trash';
 import { items } from './constants';
 import Modal from '../Modal';
-import SubCategoryForm from './SubCategoryForm';
+import NewSubcategory from './NewSubcategory';
 import FormDelete from '../Modal/FormDelete';
 import { HiPlusSm, HiOutlineDotsCircleHorizontal } from 'react-icons/hi';
 
@@ -61,7 +61,7 @@ const SubCategoryPage = () => {
                             id="new_desktop"
                             color="btn-green"
                             onClick={() => setModal(true)}
-                        >Agregar nuevo</Button>
+                        >Agregar nueva</Button>
                     </InputsContainer>
                 </Header>
                 <Table>
@@ -105,7 +105,7 @@ const SubCategoryPage = () => {
                 setShow={setModal}
                 title="Nueva SubCategoria"
             >
-                <SubCategoryForm/>
+                <NewSubcategory setShow={setModal}/>
             </Modal>
             
             <Modal
