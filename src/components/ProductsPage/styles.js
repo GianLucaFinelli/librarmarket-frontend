@@ -11,7 +11,6 @@ export const TableContainer = styled.div`
     width: 100%;
     border-radius: 8px;
     padding: 10px 16px;
-    // border: 1px solid ${p => p.theme.colors['light-gray']};
     border: 1px solid ${p => p.theme.colors['border-transparency']};
     background: ${p => p.theme.colors['light-dark-secondary']};
 `;
@@ -41,7 +40,6 @@ export const Input = styled.input`
     width: 120px;
     margin-right: 10px;
     color: ${p => p.theme.colors['light-gray']};
-    // border: 1px solid ${p => p.theme.colors['grey']};
     border: none !important;
     background-color: ${p => p.theme.colors['light-dark']};
     &:focus {
@@ -75,7 +73,6 @@ export const TH = styled.th`
 
 export const TR = styled.tr`
     font-size: 14px;
-    // border-bottom: 1px solid ${p => p.theme.colors['dark']};
     &:last-child {
         border: none;
     }
