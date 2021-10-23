@@ -19,7 +19,7 @@ import Pencil from '../assets/Pencil';
 import Trash from '../assets/Trash';
 import { items } from './constants';
 import Modal from '../Modal';
-import CategoryForm from './CategoryForm';
+import NewCategory from './NewCategory';
 
 const CategoryPage = () => {
 
@@ -69,7 +69,7 @@ const CategoryPage = () => {
                 setShow={setModal}
                 title="Nueva Categoria"
             >
-                <CategoryForm />
+                <NewCategory setShow={setModal}/>
             </Modal>
         </Container>
     )
