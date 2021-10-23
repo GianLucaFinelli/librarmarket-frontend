@@ -47,7 +47,7 @@ const CategoryPage = () => {
         <Container>
             <TableContainer>
                 <Header>
-                    <H4>Todas las Categorias</H4>
+                    <H4>Listado de categorias</H4>
                     <InputsContainer>
                         <Input placeholder="Buscar..."/>
                         <Button

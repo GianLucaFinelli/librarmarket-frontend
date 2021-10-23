@@ -62,7 +62,7 @@ const ProductsPage = () => {
         <Container>
             <TableContainer>
                 <Header>
-                    <H4>Listado de Productos</H4>
+                    <H4>Listado de productos</H4>
                     <InputsContainer>
                         <Input placeholder="Buscar..."/>
                         <Button

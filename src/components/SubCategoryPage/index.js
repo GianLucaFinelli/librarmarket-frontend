@@ -37,7 +37,7 @@ const SubCategoryPage = () => {
         <Container>
             <TableContainer>
                 <Header>
-                    <H4>Todas las SubCategorias</H4>
+                    <H4>Listado de subcategorias</H4>
                     <div>
                         <Input placeholder="Buscar..."/>
                         <Button
