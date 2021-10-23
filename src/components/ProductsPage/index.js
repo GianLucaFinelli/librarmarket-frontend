@@ -118,7 +118,7 @@ const ProductsPage = () => {
                 setShow={setModal}
                 title="Nuevo Producto"
             >
-                <NewProduct/>
+                <NewProduct setShow={setModal}/>
             </Modal>
         </Container>
     )

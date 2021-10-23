@@ -12,7 +12,7 @@ import {
 const Layout = ({ children, text }) => {
 
     // Used for responsive sidebar
-    const [show, setShow] = useState(true);
+    const [show, setShow] = useState(false);
 
     return (
         <Main>
