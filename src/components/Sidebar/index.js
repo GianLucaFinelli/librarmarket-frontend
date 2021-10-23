@@ -33,8 +33,8 @@ const Sidebar = ({ show, setShow }) => {
                     <ListItem><Link className={`${route === '/admin/products' ? 'active' : ''}`} to="/admin/products">Productos</Link></ListItem>
                     <ListItem><Link className={`${route === '/admin/categories' ? 'active' : ''}`} to="/admin/categories">Categorias</Link></ListItem>
                     <ListItem><Link className={`${route === '/admin/subcategories' ? 'active' : ''}`} to="/admin/subcategories">Subcategorias</Link></ListItem>
-                    <ListItem><Link className={`${route === '' ? 'active' : ''}`} to="#">Comprobantes</Link></ListItem>
-                    <ListItem><Link className={`${route === '' ? 'active' : ''}`} to="#">Informes</Link></ListItem>
+                    {/* <ListItem><Link className={`${route === '' ? 'active' : ''}`} to="#">Comprobantes</Link></ListItem>
+                    <ListItem><Link className={`${route === '' ? 'active' : ''}`} to="#">Informes</Link></ListItem> */}
                 </List>
             </Container>
             <Copyright>
