@@ -6,15 +6,20 @@ import {
     ButtonConfirm
  } from './styles'
 
- const FormDelete = ({ id,setShow }) => {  
+ const FormDelete = ({ id, setShow, setSelected }) => {  
 
-    const handleDelete = (id) => {
+    const handleCancel = () => {
+        setSelected(null);
+        setShow(false);
+    }
+
+    const handleDelete = id => {
         console.log(id)
     }
     
     return (
         <Container>
-            <Button onClick={() => setShow(false)}>No</Button>
+            <Button onClick={handleCancel}>No</Button>
             <ButtonConfirm onClick={() => handleDelete(id)}>Si</ButtonConfirm>
         </Container>
     );
