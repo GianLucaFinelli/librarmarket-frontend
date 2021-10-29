@@ -6,6 +6,7 @@ import {
 import Header from './Header';
 import Navbar from './Navbar';
 import Sidebar from './Sidebar';
+import Section from './Section';
 import Footer from './Footer';
 
 const LayoutPage = () => {
@@ -15,6 +16,7 @@ const LayoutPage = () => {
             <Navbar/>
             <Container>
                 <Sidebar/>
+                <Section/>
             </Container>
             <Footer/>
         </>
