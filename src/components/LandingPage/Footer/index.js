@@ -4,9 +4,16 @@ import {
     Foot,
     Container,
     Media,
+    MediaTitle,
+    IconsContainer,
     Important,
     Rights,
 } from './styles';
+import {
+    FaFacebookF,
+    FaInstagram,
+    FaTwitter,
+} from 'react-icons/fa';
 
 const Footer = () => {
     return (
@@ -14,6 +21,12 @@ const Footer = () => {
         <Foot>
             <Container>
                 <Media>
+                    <MediaTitle>Redes sociales</MediaTitle>
+                    <IconsContainer>
+                        <FaFacebookF/>
+                        <FaInstagram/>
+                        <FaTwitter/>
+                    </IconsContainer>
                 </Media>
                 <Important>
                     <p>Centro de ayuda</p>

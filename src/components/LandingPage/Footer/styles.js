@@ -15,6 +15,24 @@ export const Container = styled.div`
 
 export const Media = styled.div`
     width: 25%;
+    display: flex;
+    flex-direction: column;
+    svg {
+        width: 30px;
+        height: 30px;
+        margin-right: 15px;
+    }
+`;
+
+export const MediaTitle = styled.h3`
+    color: white;
+    margin-top: 0;
+    margin-bottom: 20px;
+`;
+
+export const IconsContainer = styled.div`
+    display: flex;
+    align-items: flex-end;
 `;
 
 export const Important = styled.div`
