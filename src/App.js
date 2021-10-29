@@ -5,6 +5,7 @@ import { theme } from './styles/theme';
 
 
 //Pages
+import Landing from './pages/Landing';
 import Login from './pages/Login';
 import Home from './pages/Home';
 import Categories from './pages/Categories';
@@ -18,6 +19,7 @@ const App = () => {
             <Router>
                 <Switch>
                     {/* Public routes */}
+                    <Route exact path="/" component={Landing}/>
                     <Route exact path="/login" component={Login}/>
 
                     {/* Private routes */}

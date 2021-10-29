@@ -1,0 +1,33 @@
+
+.section
+{
+    display: flex;
+    flex-flow: wrap;
+    width: 75%;
+}
+.item
+{
+    background-color: #EDEDED;
+    border: 1px solid grey;
+    margin:14px;
+    padding:2rem;
+    text-align: center;
+    height: 25%;
+}
+
+
+.media a img
+{
+    border-radius: 100%;
+}
+.datos
+{
+    text-align: center;
+    width:50%;
+}
+.rights
+{
+    width: 25%;
+    text-align: center;
+}
+
