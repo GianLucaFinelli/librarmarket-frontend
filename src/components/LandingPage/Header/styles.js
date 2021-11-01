@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link as RouteLink } from 'react-router-dom';
 
 export const Head = styled.header`
     height: 5rem;
@@ -24,10 +25,13 @@ export const H1 = styled.h1`
 `;
 
 export const InfoContainer = styled.div`
-
+    display: flex;
+    align-items: center;
 `;
 
-export const Button = styled.button`
+export const Button = styled(RouteLink)`
+    display: flex;
+    align-items: center;
     margin: 0 0.5rem;
     padding: 8px 12px;
     border: none !important;
@@ -36,7 +40,34 @@ export const Button = styled.button`
     font-weight: 900;
     background: transparent;
     cursor: pointer;
+    color:black;
     transition-duration: 250ms;
+    text-decoration: none !important;
+    &:hover {
+        color: white;
+        border-color: white;
+    }
+    &:focus {
+        color: white;
+        background: #FC466B;
+        outline: none;
+    }
+`;
+
+export const ButtonLogin = styled(RouteLink)`
+    display: flex;
+    align-items: center;
+    margin: 0 0.5rem;
+    padding: 8px 12px;
+    border: none !important;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 900;
+    background: #FC466B;
+    cursor: pointer;
+    color: white;
+    transition-duration: 250ms;
+    text-decoration: none !important;
     &:hover {
         color: white;
         border-color: white;
