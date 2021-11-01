@@ -16,6 +16,7 @@ export const Aside = styled.aside`
 export const H2 = styled.h2`
     text-align: center;
     padding: 10px;
+    margin-bottom: 40px;
     font-size: 25px;
     font-family: 'Barlow Condensed', sans-serif;
 `;
@@ -23,24 +24,35 @@ export const H2 = styled.h2`
 export const SectionContainer = styled.div`
     display: flex;
     justify-content: flex-start;
-    align-items: center;
     flex-direction: column;
-    margin-bottom: 20px;
+    margin: 40px;
+    border-radius: 10px;
+    background: #DA0037;
+    background: -webkit-linear-gradient(to left, #DA0037, #e33b65);
+    background: linear-gradient(to left, #DA0037, #e33b65);
 `;
 
 export const H3 = styled.h3`
-    margin: 1rem;
+    // margin: 1rem;
+    margin-bottom: 10px;
     font-family: 'Barlow Condensed', sans-serif;
+    padding: 10px;
+    background: ${p => p.theme.colors['red-secondary']};
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 `;
 
 export const List = styled.ul`
+    width: 100%;
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
     list-style-type: none;
     flex-direction: column;
 `;
 
 export const ListItem = styled.li`
     font-family: 'Catamaran', sans-serif;
+    padding: 4px 10px;
+    &:hover{
+        cursor: pointer;
+    }
 `;

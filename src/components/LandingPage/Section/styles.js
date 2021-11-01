@@ -12,4 +12,5 @@ export const SectionField = styled.section`
     margin: 0 auto;
     flex-flow: wrap;
     justify-content: space-around;
+    padding: 40px 0px;
 `;
