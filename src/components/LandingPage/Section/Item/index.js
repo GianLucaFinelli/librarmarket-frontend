@@ -16,6 +16,8 @@ import { FaCaretUp, FaCaretDown } from 'react-icons/fa';
 
 const Item = ({ item }) => {
 
+    const style = { color: "white" }
+
     const [count, setCount] = useState(item.cantidad);
 
     const handleChange = value => {
@@ -30,9 +32,9 @@ const Item = ({ item }) => {
             <P>$ {item.price}</P>
             <Description>{item.description}</Description>
             <Cantidad>
-                <IconButton onClick={() => handleChange(-1)}><FaCaretDown/></IconButton>
+                <IconButton onClick={() => handleChange(-1)}><FaCaretDown  style={style}/></IconButton>
                 <Span>{ count }</Span>
-                <IconButton onClick={() => handleChange(1)}><FaCaretUp/></IconButton>
+                <IconButton onClick={() => handleChange(1)}><FaCaretUp  style={style}/></IconButton>
             </Cantidad>
             <Button>Comprar</Button>
         </Product>

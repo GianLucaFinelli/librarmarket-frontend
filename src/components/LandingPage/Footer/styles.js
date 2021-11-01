@@ -1,7 +1,9 @@
 import styled from 'styled-components';
 
 export const Foot = styled.footer`
-    background-color: #212121;
+    background: #DA0037;
+    background: -webkit-linear-gradient(to left, #DA0037, #e33b65);
+    background: linear-gradient(to left, #DA0037, #e33b65);
     color: #FCF9F9;
     padding: 30px 0;
     `;
@@ -43,7 +45,9 @@ export const Important = styled.div`
 export const Rights = styled.div`
     width: 100%;
     text-align: center;
-    color: black;
-    background: #EDEDED;
+    color: white;
+    background: #DA0037;
+    background: -webkit-linear-gradient(to left, #e33b65, #824e96);
+    background: linear-gradient(to left, #e33b65, #824e96);
     padding: 9px 0;
 `;

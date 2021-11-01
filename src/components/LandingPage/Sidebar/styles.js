@@ -4,8 +4,13 @@ export const Aside = styled.aside`
     width:25%;
     height: auto;
     padding: 35px 0;
-    background-color: #EDEDED;
-    border-right:1px solid black;
+    background-color: ${p => p.theme.colors['light-dark']};
+    // border: 1px solid ${p => p.theme.colors['border-transparency']};
+    color: #FFF;
+
+    @media (max-width: 678px) {
+        width: 20%;
+    }
 `;
 
 export const H2 = styled.h2`
@@ -17,8 +22,10 @@ export const H2 = styled.h2`
 
 export const SectionContainer = styled.div`
     display: flex;
+    justify-content: flex-start;
     align-items: center;
     flex-direction: column;
+    margin-bottom: 20px;
 `;
 
 export const H3 = styled.h3`
@@ -28,6 +35,7 @@ export const H3 = styled.h3`
 
 export const List = styled.ul`
     display: flex;
+    justify-content: flex-start;
     align-items: center;
     list-style-type: none;
     flex-direction: column;

@@ -1,12 +1,13 @@
 import styled from 'styled-components';
 import { Link as RouteLink } from 'react-router-dom';
 
-import img from '../../assets/images/bookstore.jpg';
+// import img from '../../assets/images/bookstore.jpg';
+import imgBg from '../../assets/images/background-pink.jpg';
 
 
 export const ContainerBackgroundImage =styled.div`
     height: 100vh;
-    background: url('${img}') no-repeat center;
+    background: url('${imgBg}') no-repeat center;
 `;
 
 export const Container = styled.div`

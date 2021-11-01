@@ -2,11 +2,13 @@ import styled from 'styled-components';
 
 export const Product = styled.article`
     width: 205px;
-    margin: 14px;
+    margin: 15px;
     padding: 2rem;
+    border-radius: 10px;
     text-align: center;
-    border: 1px solid grey;
-    background-color: #EDEDED;
+    border: 1px solid ${p => p.theme.colors['border-transparency']};
+    background-color: ${p => p.theme.colors['light-dark']};
+    color: #FFF;
 `;
 
 export const H3 = styled.h3`
@@ -31,12 +33,12 @@ export const P = styled.p`
 export const Button = styled.button`
     width: 100%;
     padding: 4px 8px;
-    border: 2px solid #212121;
+    border: 2px solid  ${p => p.theme.colors['red-secondary']};
     border-radius: 4px;
-    background: transparent;
+    background: ${p => p.theme.colors['red-secondary']};
     cursor: pointer;
     font-weight: 700;
-    color: black;
+    color: #FFF;
     transition-duration: 250ms;
     &:hover {
         color: white;

@@ -2,7 +2,10 @@ import styled from 'styled-components';
 
 export const Head = styled.header`
     height: 5rem;
-    background-color: #DA0037;
+    background: #DA0037;
+    background: -webkit-linear-gradient(to left, #DA0037, #e33b65);
+    background: linear-gradient(to left, #DA0037, #e33b65);
+
 `;
 
 export const Container = styled.div`
@@ -25,10 +28,12 @@ export const InfoContainer = styled.div`
 `;
 
 export const Button = styled.button`
-    margin: 0 1rem;
-    padding: 4px 8px;
-    border: 2px solid #212121;
+    margin: 0 0.5rem;
+    padding: 8px 12px;
+    border: none !important;
     border-radius: 4px;
+    font-size: 16px;
+    font-weight: 900;
     background: transparent;
     cursor: pointer;
     transition-duration: 250ms;
@@ -37,6 +42,8 @@ export const Button = styled.button`
         border-color: white;
     }
     &:focus {
+        color: white;
+        background: #FC466B;
         outline: none;
     }
 `;
